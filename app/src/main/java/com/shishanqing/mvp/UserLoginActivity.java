@@ -15,6 +15,14 @@ import com.shishanqing.mvp.view.IUserLoginView;
 /**
  *Acitvity即是View,在view中实现接口类中的方法
  * 实现一些登陆界面的显示
+ * MVP模型：
+ * View------------>Presenter----->Model
+ *   |-------接口<-----|
+ * MVP模式建立步骤：
+ * 1.定义一个实体类，即建个数据模型
+ * 2.建立View接口（更新ui中的view状态）
+ * 3.建立presenter（主导器，通过iView和iModel接口操作model和view），activity可以把所有逻辑给presenter处理，这样java逻辑就从手机的activity中分离出来
+ * 4.在Acitivity中调用/实现以上类
  */
 
 public class UserLoginActivity extends ActionBarActivity implements IUserLoginView {
